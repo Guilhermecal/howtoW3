@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icone de menu</title>
+    <style>
+        .barra1, .barra2, .barra3{
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 7px 0;
+            transition: 0.4s;
+        }
+        .container {
+            display: inline-block;
+            cursor: pointer;
+
+        }
+        /*rotacionar as barras*/
+        .change .barra1 {
+            /*as classes change sera adicionadas no javascript*/
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+        .change .barra2 {
+            opacity: 0;
+        }
+        .change .barra3 {
+            transform: translate(0, -11px) rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onclick="funcao(this)">
+        <div class="barra1"></div>
+        <div class="barra2"></div>
+        <div class="barra3"></div>
+    </div>
+<script>
+    function funcao(x) {
+        x.classList.toggle("change")
+    }
+</script>
+</body>
+</html>

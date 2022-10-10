@@ -1,0 +1,18 @@
+.barra-icone {
+    width: 90px;
+    background-color: #555;
+}
+.barra-icone a{
+    display: block;
+    text-align: center;
+    padding: 16px;
+    color: white;
+    font-size: 36px;
+}
+.barra-icone a:hover {
+    background-color: #04aa6d;
+}
+.active {
+    background-color: #04aa6d;
+    /*adciciona cor quando ativo*/
+}
