@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acondion</title>
+    <link rel="stylesheet" href="accordion-style.css">
+</head>
+<body>
+    <h1>crie um acordeão </h1>
+    <h2>praticando no w3school</h2>
+    <p>aprenda a criar um aaccordion(conteudo dobravvel)</p>
+    <hr>
+    <button class="accordion">Sessão 1</button>
+    <div class="painel">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit qui, quasi voluptatem numquam asperiores ab in sint aliquam magni assumenda ipsa impedit at dolorum nesciunt rem natus, praesentium temporibus ratione!</p>
+    </div>
+
+    <button class="accordion">sessão 2</button>
+    <div class="painel">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quaerat tenetur nulla itaque quos. At, labore saepe perspiciatis, dolor vero est temporibus dolore modi odit, omnis beatae blanditiis maxime aliquid.</p>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName('accordion')
+        var i;
+
+        for (i = 0;i < acc.length; i++) {
+            acc[i].addEventListener("click", function(){
+                this.classList.toggle("active")
+
+                var painel = this.nextElementSibling;
+                if (painel.style.maxHeight) {
+                    painel.style.maxHeight = null;
+                } else {
+                    painel.style.maxHeight = painel.scrollHeight + 'px'
+                }
+            });
+        }
+        /*
+        para fazer um acordeão animado, adicione max-height: 0,
+        overflow: hidden;
+        transition: 
+        para a propriedade max-height, á classe painel.
+        em seguida, use JavaScript, para deslizar o conteudo para baixo definindo um max-height,dpependendo da altura do painel em diferentes tamanhos de tela
+        */
+    </script>
+</body>
+</html>
